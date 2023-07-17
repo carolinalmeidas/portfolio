@@ -43,7 +43,7 @@ export const Project = (): JSX.Element => {
   return (
     <>
       {repositories &&
-        repositories?.map?.((repository) => (
+        repositories?.map?.((repository) =>
           <ProjectWrapper key={repository.id}>
             <ProjectTitle
               as="h2"
@@ -59,6 +59,7 @@ export const Project = (): JSX.Element => {
                 Primary Language:
               </Text>
               {repository.language ? (
+
                 <ProjectStackTech>
                   <Text color="grey2" type="body2">
                     {repository.language}
@@ -90,7 +91,7 @@ export const Project = (): JSX.Element => {
               )}
             </ProjectLinks>
           </ProjectWrapper>
-        ))}
+        )}
     </>
   );
 };
